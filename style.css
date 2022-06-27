@@ -9,7 +9,7 @@ font-family: 'Lexend Deca', sans-serif; */
   --page-3-color: purple;
   --page-4-color: crimson;
   --page-5-color: navy;
-  --animate-speed: 1s;
+  --animate-speed: 1.2s;
 }
 
 * {
@@ -79,4 +79,28 @@ body {
 .btn-dark:hover {
   background: #f4f4f4;
   color: #333;
+}
+
+/* keyframes */
+@keyframes animate-heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-paragraph {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Page Animations */
+#page-1 h1 {
+  transform: translateY(-200rem);
+  animation: animate-heading var(--animate-speed) forwards ease-in-out;
+}
+
+#page-1 p {
+  transform: translateX(-300rem);
+  animation: animate-paragraph var(--animate-speed) forwards var(--animate-speed) ease-in-out;
 }
